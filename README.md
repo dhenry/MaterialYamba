@@ -45,6 +45,12 @@ and view it, after a short pause, from the timeline view.
 
 The repo contains the following branches:
 * master: this branch
+* lolly0: Original KitKat app
+* lolly1: Basic Lollipop conversion
+* lolly2: Material Tweets with animated button
+* lolly3: Recycler view timeline (with SimpleCursorAdapter analog)
+* lolly4: Transition animation.
+
 * other branches to be added later
 
 
