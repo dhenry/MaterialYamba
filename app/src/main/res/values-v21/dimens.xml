@@ -15,17 +15,8 @@
 -->
 <resources>
 
-    <color name="primary">#55ACEE</color>
-    <color name="primary_dark">#0D47A1</color>
-    <color name="accent">#8899A6</color>
-
-    <color name="fog">#88888888</color>
-    <color name="text">#3388ff</color>
-
-    <color name="tweet_len_ok">#339944</color>
-    <color name="tweet_len_warn">#ffab00</color>
-    <color name="tweet_len_err">#dd2200</color>
+    <dimen name="elevation_low">2dp</dimen>
+    <dimen name="elevation_mid">4dp</dimen>
+    <dimen name="elevation_high">6dp</dimen>
 
 </resources>
-
-

@@ -13,19 +13,20 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <color name="primary">#55ACEE</color>
-    <color name="primary_dark">#0D47A1</color>
-    <color name="accent">#8899A6</color>
+    <style name="AppBaseTheme" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+    </style>
 
-    <color name="fog">#88888888</color>
-    <color name="text">#3388ff</color>
+    <style name="yambaPrefs" parent="AppTheme"/>
 
-    <color name="tweet_len_ok">#339944</color>
-    <color name="tweet_len_warn">#ffab00</color>
-    <color name="tweet_len_err">#dd2200</color>
+    <style name="yambaText" parent="android:Widget.Material.Light.TextView"/>
+
+    <style name="yambaText.label">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
 
 </resources>
-
-
