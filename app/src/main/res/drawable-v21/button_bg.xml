@@ -13,16 +13,12 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<resources>
-
-    <dimen name="elevation_low">2dp</dimen>
-    <dimen name="elevation_mid">4dp</dimen>
-    <dimen name="elevation_high">6dp</dimen>
-
-    <dimen name="button_horizontal_margin">30dp</dimen>
-    <dimen name="button_vertical_margin">20dp</dimen>
-
-    <dimen name="tweet_box_relief">0dp</dimen>
-    <dimen name="corner_radius">4dp</dimen>
-
-</resources>
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/primary_dark">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/primary"/>
+        </shape>
+    </item>
+</ripple>

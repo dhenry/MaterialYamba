@@ -22,6 +22,9 @@
     <!-- Font sizes -->
     <dimen name="text_medium">24sp</dimen>
     <dimen name="text_large">36sp</dimen>
+
+    <dimen name="tweet_box_relief">0dp</dimen>
     <dimen name="pad_button">5dp</dimen>
+    <dimen name="button_diameter">64dp</dimen>
 
 </resources>
