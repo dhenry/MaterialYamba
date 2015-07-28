@@ -24,9 +24,8 @@
     android:background="@drawable/background"
     tools:context=".TimelineActivity" >
 
-    <fragment
+    <FrameLayout
         android:id="@+id/fragment_timeline"
-        android:name="com.twitter.university.android.yamba.TimelineFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

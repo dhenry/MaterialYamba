@@ -13,19 +13,15 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<resources>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <dimen name="elevation_low">2dp</dimen>
-    <dimen name="elevation_mid">4dp</dimen>
-    <dimen name="elevation_high">6dp</dimen>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/timeline_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <dimen name="button_horizontal_margin">30dp</dimen>
-    <dimen name="button_vertical_margin">20dp</dimen>
-
-    <dimen name="tweet_box_relief">0dp</dimen>
-    <dimen name="corner_radius">4dp</dimen>
-
-    <dimen name="timeline_item_vertical_margin">3dp</dimen>
-    <dimen name="timeline_item_horizontal_pad">4dp</dimen>
-
-</resources>
+</FrameLayout>
