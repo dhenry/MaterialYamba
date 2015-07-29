@@ -129,7 +129,7 @@ public class TweetFragment extends Fragment {
         boolean visible = canTweet(n);
         if (YambaApplication.USING_MATERIAL) { animateButton(submitButton, visible); }
         else {
-            if (null != submitButton) { submitButton.setEnabled(visible); }
+            if (null != submitButton) { submitButton.setVisibility((visible) ? View.VISIBLE : View.INVISIBLE); }
         }
 
         n = tweetMax - n;

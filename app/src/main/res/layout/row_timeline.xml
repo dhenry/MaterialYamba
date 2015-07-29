@@ -13,35 +13,45 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/timeline_item_vertical_margin"
+    card_view:cardBackgroundColor="#99ffffff"
+    card_view:cardCornerRadius="@dimen/corner_radius">
 
-    <TextView
-        android:id="@+id/timeline_handle"
-        android:transitionName="handle"
-        style="@style/yambaText.medium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" />
-
-    <TextView
-        android:id="@+id/timeline_time"
-        android:transitionName="time"
-        style="@style/yambaText.italic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" />
-
-    <TextView
-        android:id="@+id/timeline_tweet"
-        android:transitionName="tweet"
-        style="@style/yambaText"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/timeline_handle" />
+        android:paddingLeft="@dimen/timeline_item_horizontal_pad"
+        android:paddingRight="@dimen/timeline_item_horizontal_pad"
+        android:elevation="@dimen/elevation_mid" >
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/timeline_handle"
+            style="@style/yambaText.medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/timeline_time"
+            style="@style/yambaText.italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/timeline_tweet"
+            style="@style/yambaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/timeline_handle" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

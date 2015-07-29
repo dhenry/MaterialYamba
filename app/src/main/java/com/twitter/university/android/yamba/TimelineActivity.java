@@ -32,23 +32,9 @@ public class TimelineActivity extends YambaActivity {
     private boolean usingFragments;
 
     @Override
-    public void startActivityFromFragment(Fragment frag, Intent i, int code) {
-        startActivityFromFragment(frag, i, code, null);
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    @Override
     public void startActivityFromFragment (Fragment frag, Intent i, int code, Bundle opts) {
         if (usingFragments) { launchDetailFragment(i.getExtras()); }
-        else {
-            // Caution!  Post JellyBean, this will call the 4-arg version again!
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
-                super.startActivityFromFragment(frag, i, code);
-            }
-            else {
-                super.startActivityFromFragment(frag, i, code, opts);
-            }
-        }
+        else { super.startActivityFromFragment(frag, i, code, opts); }
     }
 
     @Override
@@ -59,8 +45,7 @@ public class TimelineActivity extends YambaActivity {
 
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                .add(R.id.fragment_timeline,
-                (YambaApplication.USING_MATERIAL) ? new MaterialTimelineFragment() : new TimelineFragment())
+                .add(R.id.fragment_timeline, new TimelineFragment())
                 .commit();
         }
 
@@ -88,18 +73,18 @@ public class TimelineActivity extends YambaActivity {
 
         FragmentTransaction xact = mgr.beginTransaction();
         xact.add(
-                R.id.timeline_details,
-                new TimelineDetailFragment(),
-                DETAIL_FRAGMENT);
+            R.id.timeline_details,
+            new TimelineDetailFragment(),
+            DETAIL_FRAGMENT);
         xact.commit();
     }
 
     private void launchDetailFragment(Bundle args) {
         FragmentTransaction xact = getFragmentManager().beginTransaction();
         xact.replace(
-                R.id.timeline_details,
-                TimelineDetailFragment.newInstance(args),
-                DETAIL_FRAGMENT);
+            R.id.timeline_details,
+            TimelineDetailFragment.newInstance(args),
+            DETAIL_FRAGMENT);
         xact.addToBackStack(null);
         xact.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         xact.commit();

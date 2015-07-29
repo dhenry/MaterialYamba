@@ -13,60 +13,78 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context=".TweetFragment" >
+    card_view:cardCornerRadius="@dimen/corner_radius"
+    tools:context=".TweetFragment">
 
-    <RelativeLayout
-        android:layout_width="0dp"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/tweet_submit"
+        android:layout_width="@dimen/button_diameter"
+        android:layout_height="@dimen/button_diameter"
+        app:elevation="@dimen/elevation_mid"
+        android:layout_gravity="top|right"
+        android:layout_marginTop="@dimen/button_vertical_margin"
+        android:layout_marginRight="@dimen/button_horizontal_margin"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white"
+        android:contentDescription="@string/title_tweet"
+        app:pressedTranslationZ="4dp"
+        app:backgroundTint="@color/primary_dark"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_weight="2" >
+        android:orientation="horizontal"
+        app:elevation="@dimen/elevation_low">
 
-        <TextView
-            android:id="@+id/tweet_title"
-            style="@style/yambaText.label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:text="@string/title_tweet" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
 
-        <TextView
-            android:id="@+id/tweet_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/tweet_title"
-            android:textColor="@color/tweet_len_ok"
-            android:text="@integer/tweet_max"/>
+            <TextView
+                style="@style/yambaText.label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                android:text="@string/title_tweet"/>
 
-        <Button
-            android:id="@+id/tweet_submit"
-            style="@style/yambaText.button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:text="@string/tweet_submit"
-            android:enabled="false"/>
+            <TextView
+                android:id="@+id/tweet_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textColor="@color/tweet_len_ok"
+                android:text="@integer/tweet_max"/>
+        </LinearLayout>
 
-    </RelativeLayout>
 
-    <EditText
-        android:id="@+id/tweet_tweet"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:background="@color/fog"
-        android:gravity="top|left"
-        android:hint="@string/tweet_hint"
-        android:inputType="textMultiLine" >
+        <EditText
+            android:id="@+id/tweet_tweet"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:elevation="@dimen/elevation_mid"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/tweet_box_relief"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:gravity="top|left"
+            android:hint="@string/tweet_hint"
+            android:inputType="textMultiLine">
 
-        <requestFocus />
-    </EditText>
+            <requestFocus/>
+        </EditText>
+    </LinearLayout>
 
-</LinearLayout>
+</android.support.v7.widget.CardView>

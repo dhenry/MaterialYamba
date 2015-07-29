@@ -20,9 +20,10 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
 
 
-public abstract class YambaActivity extends Activity {
+public abstract class YambaActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

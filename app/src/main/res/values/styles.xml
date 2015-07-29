@@ -15,15 +15,18 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar"/>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:actionBarStyle">@style/YambaActionBar</item>
+    </style>
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme" />
 
-    <style name="yambaPrefs" parent="AppTheme">
-        <item name="android:textColor">@color/text</item>
-        <item name="android:textSize">@dimen/text_medium</item>
-    </style>
+
+    <style name="yambaPrefs" parent="AppTheme"/>
 
     <style name="yambaText" parent="android:Widget.Holo.Light.TextView">
         <item name="android:textColor">@color/text</item>
@@ -46,6 +49,10 @@
         <item name="android:textSize">@dimen/text_medium</item>
         <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="YambaActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/primary</item>
     </style>
 
 </resources>

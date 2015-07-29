@@ -29,7 +29,6 @@ import android.widget.TextView;
  * An extremely simple replacement for the SimpleCursorAdapter,
  * for use with the RecyclerView
  */
-@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 public class SimpleCursorRecyclerViewAdapter
     extends RecyclerView.Adapter<SimpleCursorRecyclerViewAdapter.CursorViewHolder>
 {
