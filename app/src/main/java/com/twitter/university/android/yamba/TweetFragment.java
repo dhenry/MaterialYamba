@@ -85,6 +85,8 @@ public class TweetFragment extends Fragment {
             }
         );
 
+        updateCount();
+
         return v;
     }
 
